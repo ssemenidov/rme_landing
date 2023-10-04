@@ -53,7 +53,7 @@ export const ServicesComponent: FC = () => {
   const ref = useRef<HTMLDivElement>(null)
   const { events } = useDraggable(ref as MutableRefObject<HTMLElement>)
   return (
-    <div className={styles.services} id={'benefits'}>
+    <div className={styles.services} id={'services'}>
       <div className={styles.content}>
         <div className={styles.services_title}>
           <span>Услуги</span>

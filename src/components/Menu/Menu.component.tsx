@@ -19,7 +19,9 @@ export const Menu: FC = () => {
         <div className={styles.item}>
           <Link href={'#works'}>Работы</Link>
         </div>
-        <div className={styles.item}>Услуги</div>
+        <div className={styles.item}>
+          <Link href={'#works'}>Услуги</Link>
+        </div>
         <div className={styles.item}>О нас</div>
         <div className={styles.item}>Партнеры</div>
       </div>
