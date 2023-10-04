@@ -4,6 +4,7 @@ import { Menu } from '@/components/Menu/Menu.component'
 import { Hero } from '@/components/Hero/Hero.component'
 import { Benefits } from '@/components/Benefits/Benefits.component'
 import { Works } from '@/components/Works/Works.component'
+import { ServicesComponent } from '@/components/Services/Services.component'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Benefits />
         <Works />
+        <ServicesComponent />
       </main>
     </div>
   )
