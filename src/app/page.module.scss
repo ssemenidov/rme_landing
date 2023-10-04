@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  main {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 190px);
+    position: relative;
+    margin-left: 190px;
+    height: 300vh;
+  }
+}
