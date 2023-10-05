@@ -77,7 +77,7 @@ const ContactUsComponent: FC = () => {
           <input
             type={'submit'}
             className={styles.contact_form__button}
-            value={'Отправить'}
+            value={'Отправить заявку'}
           />
         </form>
       </div>
