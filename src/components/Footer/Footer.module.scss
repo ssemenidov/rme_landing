@@ -1,0 +1,15 @@
+.footer {
+  height: 30vh;
+  width: 100%;
+  background: #3D3D3D;
+  display: flex;
+  flex-direction: column;
+  &_links {
+
+  }
+  &_bottom {
+    color: #838383;
+    font-size: 1.2em;
+    margin: auto auto 1em;
+  }
+}

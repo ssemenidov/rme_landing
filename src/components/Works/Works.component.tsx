@@ -10,9 +10,9 @@ import img6 from '../../../public/works/site.png'
 
 const Works: FC = () => {
   return (
-    <div className={styles.works} id={'works'}>
+    <section className={styles.works} id={'works'}>
       <div className={styles.content}>
-        <div className={styles.works_title}>Работы</div>
+        <h3 className={styles.works_title}>Работы</h3>
         <div className={styles.works_cards}>
           <WorkCard
             text={'Real time классификация и детекция дронов'}
@@ -48,7 +48,7 @@ const Works: FC = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

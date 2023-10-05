@@ -8,11 +8,9 @@ import refresh from '../../../public/icons/refresh.svg'
 
 const Benefits: FC = () => {
   return (
-    <div className={styles.benefits} id={'benefits'}>
+    <section className={styles.benefits} id={'benefits'}>
       <div className={styles.content}>
-        <div className={styles.benefits_title}>
-          <span>Наши преимущества</span>
-        </div>
+        <h3 className={styles.benefits_title}>Наши преимущества</h3>
         <div className={styles.benefits_cards}>
           <BenefitCard
             title={'Индивидуальный подход'}
@@ -24,14 +22,14 @@ const Benefits: FC = () => {
           <BenefitCard
             title={'Справедливая цена'}
             text={
-              'Основанная на нашем опыте, качестве предоставляемых услуг и рыночных стандартах'
+              'Основанная на нашем опыте, качестве услуг и рыночных стандартах, чтобы обеспечить клиентам максимальную ценность и эффективность в каждом проекте.'
             }
             icon={rub}
           />
           <BenefitCard
             title={'Экспертное мнение и опыт'}
             text={
-              'Навыки и опыт нашей команды обеспечат вас качественным и инновационным продуктом'
+              'Опыт и компетенции нашей выдающейся команды будут служить гарантом создания продукта высочайшего качества, воплощающего передовые инновации.'
             }
             icon={hands}
           />
@@ -44,7 +42,7 @@ const Benefits: FC = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

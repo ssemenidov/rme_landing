@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const Partners: FC = () => {
   return (
-    <div className={styles.partners} id={'partners'}>
+    <section className={styles.partners} id={'partners'}>
       <div className={styles.content}>
-        <h1 className={styles.partners_title}>Партнеры</h1>
+        <h3 className={styles.partners_title}>Партнеры</h3>
         <div className={styles.partners_cards}>
           <div className={styles.partners_cards__item}>
             <Link
@@ -37,7 +37,7 @@ const Partners: FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

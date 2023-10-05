@@ -7,6 +7,9 @@ import { Works } from '@/components/Works/Works.component'
 import { ServicesComponent } from '@/components/Services/Services.component'
 import { Partners } from '@/components/Partners/Partners.component'
 import { Process } from '@/components/Process/Process.component'
+import { AboutUsComponent } from '@/components/AboutUs/AboutUs.component'
+import { ContactUsComponent } from '@/components/ContactUs/ContactUs.component'
+import { FooterComponent } from '@/components/Footer/Footer.component'
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
         <ServicesComponent />
         <Partners />
         <Process />
+        <AboutUsComponent />
+        <ContactUsComponent />
+        <FooterComponent />
       </main>
     </div>
   )

@@ -53,11 +53,9 @@ export const ServicesComponent: FC = () => {
   const ref = useRef<HTMLDivElement>(null)
   const { events } = useDraggable(ref as MutableRefObject<HTMLElement>)
   return (
-    <div className={styles.services} id={'services'}>
+    <section className={styles.services} id={'services'}>
       <div className={styles.content}>
-        <div className={styles.services_title}>
-          <span>Услуги</span>
-        </div>
+        <h3 className={styles.services_title}>Услуги</h3>
         <div className={styles.services_cards} {...events} ref={ref}>
           {servicesData.map((e, i) => (
             <ServiceCard
@@ -70,6 +68,6 @@ export const ServicesComponent: FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

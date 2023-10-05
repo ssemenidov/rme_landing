@@ -35,9 +35,9 @@ const data = [
 
 const Process: FC = () => {
   return (
-    <div className={styles.process}>
+    <section className={styles.process}>
       <div className={styles.content}>
-        <h1 className={styles.process_title}>Этапы реализации</h1>
+        <h3 className={styles.process_title}>Этапы реализации</h3>
         <div className={styles.process_cards}>
           {data.map((e, i) => (
             <div className={styles.process_cards__item} key={`process_${i}`}>
@@ -54,7 +54,7 @@ const Process: FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

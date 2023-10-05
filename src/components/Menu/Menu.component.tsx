@@ -25,11 +25,13 @@ export const Menu: FC = () => {
         <div className={styles.item}>
           <Link href={'#partners'}>Партнеры</Link>
         </div>
-        <div className={styles.item}>О нас</div>
+        <div className={styles.item}>
+          <Link href={'#about-us'}>О нас</Link>
+        </div>
       </div>
-      <div className={styles.button}>
+      <Link href={'#contact-us'} className={styles.button}>
         <Button text={'Оставить заявку'} size={'md'} />
-      </div>
+      </Link>
       <div className={styles.bottom}>
         <span>LLC “MIB”</span>
         <div>
