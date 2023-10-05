@@ -20,10 +20,12 @@ export const Menu: FC = () => {
           <Link href={'#works'}>Работы</Link>
         </div>
         <div className={styles.item}>
-          <Link href={'#works'}>Услуги</Link>
+          <Link href={'#services'}>Услуги</Link>
+        </div>
+        <div className={styles.item}>
+          <Link href={'#partners'}>Партнеры</Link>
         </div>
         <div className={styles.item}>О нас</div>
-        <div className={styles.item}>Партнеры</div>
       </div>
       <div className={styles.button}>
         <Button text={'Оставить заявку'} size={'md'} />

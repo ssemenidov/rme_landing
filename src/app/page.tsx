@@ -5,6 +5,8 @@ import { Hero } from '@/components/Hero/Hero.component'
 import { Benefits } from '@/components/Benefits/Benefits.component'
 import { Works } from '@/components/Works/Works.component'
 import { ServicesComponent } from '@/components/Services/Services.component'
+import { Partners } from '@/components/Partners/Partners.component'
+import { Process } from '@/components/Process/Process.component'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
         <Benefits />
         <Works />
         <ServicesComponent />
+        <Partners />
+        <Process />
       </main>
     </div>
   )
