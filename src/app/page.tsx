@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './page.module.scss'
 import { Menu } from '@/components/Menu/Menu.component'
 import { Hero } from '@/components/Hero/Hero.component'
