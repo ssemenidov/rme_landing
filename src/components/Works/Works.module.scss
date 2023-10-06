@@ -1,13 +1,17 @@
 .works {
-  height: 100vh;
-  max-height: 100vh;
   background: #E7ECFF;
   display: flex;
   flex-direction: column;
+  height: max-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   .content {
     display: flex;
     flex-direction: column;
     margin: auto;
+    width: 100%;
   }
   &_title {
     font-size: 3em;

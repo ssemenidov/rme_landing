@@ -1,10 +1,12 @@
-import { FC } from 'react'
+'use client'
+import { FC, MutableRefObject, useRef } from 'react'
 import styles from './Process.module.scss'
 import arrow1 from '../../../public/arrows/arrow1.svg'
 import arrow2 from '../../../public/arrows/arrow2.svg'
 import arrow3 from '../../../public/arrows/arrow3.svg'
 import arrow4 from '../../../public/arrows/arrow4.svg'
 import Image from 'next/image'
+import { useDraggable } from 'react-use-draggable-scroll'
 
 const data = [
   {
@@ -34,11 +36,13 @@ const data = [
 ]
 
 const Process: FC = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  const { events } = useDraggable(ref as MutableRefObject<HTMLElement>)
   return (
     <section className={styles.process}>
       <div className={styles.content}>
         <h3 className={styles.process_title}>Этапы реализации</h3>
-        <div className={styles.process_cards}>
+        <div className={styles.process_cards} ref={ref} {...events}>
           {data.map((e, i) => (
             <div className={styles.process_cards__item} key={`process_${i}`}>
               <div className={styles.process_cards__item___title}>

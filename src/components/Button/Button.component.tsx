@@ -1,17 +1,19 @@
-import {FC} from 'react';
-import styles from './Button.module.scss';
+import { FC } from 'react'
+import styles from './Button.module.scss'
 
 const Button: FC<{
-  text: string,
+  text: string
   size?: 'md' | 'lg'
-}> = ({text, size}) => {
+}> = ({ text, size = 'lg' }) => {
   return (
-    <button className={`${styles.button} ${size === 'md' ? styles.buttonMd : styles.buttonLg}`}>{text}</button>
-  );
-};
-
-Button.defaultProps = {
-  size: 'lg'
+    <button
+      className={`${styles.button} ${
+        size === 'md' ? styles.buttonMd : styles.buttonLg
+      }`}
+    >
+      {text}
+    </button>
+  )
 }
 
-export {Button};
+export { Button }

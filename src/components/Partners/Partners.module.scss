@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     &__item {
       color: #71767D;
-      font-size: 32px;
+      font-size: 3vw;
       font-style: normal;
       font-weight: 700;
       line-height: 150%;
@@ -33,5 +33,18 @@
     font-size: 3em;
     font-style: normal;
     font-weight: 700;
+  }
+}
+@media screen and (max-width: 460px) {
+  .partners {
+    &_cards {
+      margin-top: 3vh;
+      &__item {
+        font-size: 6vw;
+      }
+    }
+    &_title {
+      font-size: 10vw;
+    }
   }
 }

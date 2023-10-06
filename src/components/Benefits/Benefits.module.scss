@@ -1,20 +1,28 @@
 .benefits {
   width: 100%;
+  max-width: 100%;
   max-height: 100vh;
   height: 100vh;
   margin-top: 0;
-  padding: 3em;
   display: flex;
   .content {
     display: flex;
     flex-direction: column;
     margin: auto;
+    max-width: 100%;
+    width: 100%;
   }
   &_cards {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     margin-top: 4em;
+    flex-shrink: 0;
+    width: 100%;
+    gap: 2em;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &_title {
     margin: 0 auto;
@@ -24,39 +32,110 @@
   }
 }
 
+
 .benefitCard {
   border-radius: 20px;
-  padding: 2em;
+  padding: 1.5vw;
   background: #FFF;
   box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.10);
   display: flex;
   flex-direction: column;
   width: 20%;
-  height: 480px;
-  min-height: 360px;
+  min-width: 300px;
+  height: 45vh;
+  max-height: 60vh;
   margin: auto;
+  margin-left: 32px;
   transition: all 0.2s ease;
   cursor: pointer;
   &:hover {
     transform: scale(1.05);
   }
   &_icon {
-    margin-left: 0;
-    margin-top: 1.5em;
+    margin: 1.5vh auto 0;
   }
   &_title {
-    font-size: 1.7em;
+    font-size: 1.3vw;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
-    margin-top: 2em;
+    margin-top: 4vh;
   }
   &_text {
     color: #000;
-    font-size: 16px;
+    font-size: 0.8vw;
+    text-align: justify-all;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
     margin-top: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .benefits {
+    &_cards {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      margin-top: 4em;
+      flex-shrink: 0;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-right: 30px;
+      gap: 2em;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) {
+  .benefitCard {
+    &_title {
+      font-size: 1.5vw;
+      text-align: center;
+    }
+    &_text {
+      font-size: 1vw;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .benefits {
+    width: 100%;
+    &_title {
+      font-size: 7vw;
+    }
+    &_cards {
+      width: 100%;
+    }
+  }
+  .benefitCard {
+    padding: 4vw;
+    background: #FFF;
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-width: 290px;
+    height: 50vh;
+    max-height: 60vh;
+    margin: auto auto auto 16px;
+    &_title {
+      font-size: 6vw;
+      text-align: center;
+    }
+    &_text {
+      font-size: 4vw;
+      text-align: justify-all;
+    }
   }
 }

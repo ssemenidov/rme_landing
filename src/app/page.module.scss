@@ -1,15 +1,23 @@
 .page {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  max-height: 100vh;
-  height: 100vh;
+  height: 100dvh;
+  margin-top: 0;
+  margin-bottom: 0;
   main {
-    display: flex;
-    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
     width: calc(100% - 190px);
-    position: relative;
     margin-left: 190px;
-    height: 700vh;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .page {
+    main {
+      width: 100%;
+      margin: 0;
+      height: max-content;
+    }
   }
 }
