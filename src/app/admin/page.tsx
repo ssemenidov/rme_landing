@@ -32,15 +32,18 @@ const Page: FC = () => {
   }
 
   const COLUMNS = [
-    { label: 'Имя', renderCell: (item) => item.name },
+    { label: 'Имя', renderCell: (item: { name: any }) => item.name },
     {
       label: 'Email',
-      renderCell: (item) => item.email,
+      renderCell: (item: { email: any }) => item.email,
     },
-    { label: 'Комментарий', renderCell: (item) => item.comment },
+    {
+      label: 'Комментарий',
+      renderCell: (item: { comment: any }) => item.comment,
+    },
     {
       label: 'Создана',
-      renderCell: (item) =>
+      renderCell: (item: { creationTimestamp: string | number | Date }) =>
         new Date(item.creationTimestamp).toLocaleDateString(),
     },
   ]
