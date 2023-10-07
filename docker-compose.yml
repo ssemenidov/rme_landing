@@ -1,0 +1,38 @@
+services:
+  ui_dev:
+    image: nginx:alpine
+    ports:
+      - "9000:9000"
+    volumes:
+      - type: bind
+        source: .nginx/dev.conf.template
+        target: /etc/nginx/templates/nginx.conf.template
+    environment:
+      - UI_SERVER=http://host.docker.internal:3000
+      - CORE_URL=http://158.160.81.104:8080
+    profiles: [ "dev" ]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  app:
+    build:
+      context: .
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "9000:9000"
+    volumes:
+      - type: bind
+        source: .nginx/dev.conf.template
+        target: /etc/nginx/templates/nginx.conf.template
+    environment:
+      - UI_SERVER=http://app:3000
+      - CORE_URL=http://host.docker.internal:8080
+    profiles: [ "dev" ]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - app

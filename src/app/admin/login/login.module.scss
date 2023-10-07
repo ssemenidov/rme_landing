@@ -1,0 +1,11 @@
+.page {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 100dvh;
+  .content {
+    margin: auto;
+    display: flex;
+    width: 20%;
+  }
+}

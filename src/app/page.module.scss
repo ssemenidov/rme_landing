@@ -3,12 +3,14 @@
   height: 100dvh;
   margin-top: 0;
   margin-bottom: 0;
+  overflow: auto;
   main {
     margin-top: 0;
     margin-bottom: 0;
     width: calc(100% - 190px);
     margin-left: 190px;
     position: relative;
+    overflow: hidden;
   }
 }
 

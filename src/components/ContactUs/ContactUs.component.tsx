@@ -1,7 +1,8 @@
 'use client'
 import { FC, useState } from 'react'
 import styles from './ContactUs.module.scss'
-
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 const ContactUsComponent: FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -16,10 +17,11 @@ const ContactUsComponent: FC = () => {
         <h3 className={styles.contact_title}>Заказать услуги</h3>
         <form
           className={styles.contact_form}
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault()
             if (!isAccepted) {
               setNeedToAccept(true)
+              return
             }
             console.log({
               name,
@@ -27,6 +29,42 @@ const ContactUsComponent: FC = () => {
               description,
               isAccepted,
             })
+
+            const response = await fetch('/api/request', {
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              method: 'POST',
+              body: JSON.stringify({
+                name,
+                email,
+                comment: description,
+              }),
+            })
+            if (response.ok) {
+              toast.success('Ваша зявка отправлена!', {
+                position: 'bottom-right',
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+              })
+            } else {
+              toast.error('Произошла ошибка, попробуйте снова', {
+                position: 'bottom-right',
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+              })
+            }
+            console.log(response)
           }}
         >
           <input
@@ -81,6 +119,18 @@ const ContactUsComponent: FC = () => {
           />
         </form>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </section>
   )
 }
