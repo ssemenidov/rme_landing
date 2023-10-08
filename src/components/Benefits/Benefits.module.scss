@@ -116,6 +116,7 @@
     }
     &_cards {
       width: 100%;
+      gap: 0.5em;
     }
   }
   .benefitCard {
@@ -135,7 +136,7 @@
     }
     &_text {
       font-size: 4vw;
-      text-align: justify-all;
+      text-align: center;
     }
   }
 }

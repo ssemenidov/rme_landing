@@ -1,6 +1,10 @@
 import { FC } from 'react'
 import styles from './Partners.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import merlion from '../../../public/icons/merlion.svg'
+import axoft from '../../../public/icons/axoft.svg'
 
 const Partners: FC = () => {
   return (
@@ -14,7 +18,7 @@ const Partners: FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Merlion
+              <Image src={merlion} alt={'merlion'} />
             </Link>
           </div>
           <div className={styles.partners_cards__item}>
@@ -32,7 +36,7 @@ const Partners: FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Axoft
+              <Image src={axoft} alt={'axoft'} />
             </Link>
           </div>
         </div>

@@ -50,10 +50,6 @@ const AboutUsComponent: FC = () => {
     <div className={styles.aboutUs} id={'about-us'}>
       <div className={styles.content}>
         <h3 className={styles.aboutUs_title}>Наша команда</h3>
-        <h4 className={styles.aboutUs_subtitle}>
-          RMe - Главный подрядчик в организации цифровизации <br /> Ростовской
-          области
-        </h4>
         <div className={styles.aboutUs_cards} ref={ref} {...events}>
           {cards.map((e, i) => (
             <TeamCard

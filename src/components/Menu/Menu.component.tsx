@@ -64,11 +64,15 @@ export const Menu: FC = () => {
         </Link>
         <div className={styles.bottom}>
           <span>LLC “MIB”</span>
+          <span className={styles.contacts_text}>Контакты:</span>
+          <Link href={'tel:+79160070073'} className={styles.contacts_text}>
+            +7 916 007-00-73
+          </Link>
           <div>
             <Link href={'#'}>
               <Image src={telegram} alt={'@'} />
             </Link>
-            <Link href={'#'}>
+            <Link href={'https://wa.me/79160070073'} target={'_blank'}>
               <Image src={whatsapp} alt={'@'} />
             </Link>
           </div>

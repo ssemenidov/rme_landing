@@ -13,21 +13,32 @@
     margin: auto;
     width: 100%;
   }
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
   &_title {
     font-size: 3em;
     font-style: normal;
     font-weight: 700;
     margin: auto;
-    margin-bottom: 1em;
   }
   &_cards {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-grow: 1;
     flex-shrink: 0;
-    width: 90%;
-    flex-basis: 33.333333%;
-    margin: auto;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 30px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -44,6 +55,7 @@
   transition: all 0.2s ease;
   cursor: pointer;
   position: relative;
+  margin-left: 1em;
   &:hover {
     transform: scale(1.05);
   }
@@ -78,5 +90,24 @@
     font-weight: 600;
     line-height: 120%;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .works {
+    &_cards {
+      padding-top: 20px;
+    }
+    &_title {
+      margin-top: 10px;
+    }
+  }
+  .worksCard {
+    min-width: 300px;
+    max-width: 440px;
+    height: 250px;
+    &_image {
+      height: 150px;
+    }
   }
 }

@@ -62,13 +62,17 @@
   .process {
     padding-right: 0;
     padding-left: 0;
-    height: 80dvh;
+    height: auto;
+    .arrow {
+      display: none;
+    }
     &_title {
       font-size: 8vw;
     }
     &_cards {
         display: flex;
-        flex-direction: row;
+      margin: auto;
+        flex-direction: column;
         flex-grow: 1;
         margin-top: 3em;
         flex-shrink: 0;
@@ -77,16 +81,16 @@
         overflow-y: hidden;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;
-        padding-top: 60px;
         padding-bottom: 60px;
-        padding-right: 30px;
         gap: 2em;
         &::-webkit-scrollbar {
           display: none;
         }
       &__item {
-        height: 11em;
+        height: 8em;
+        margin: auto;
       }
     }
   }
+
 }
