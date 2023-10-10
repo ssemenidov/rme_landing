@@ -30,7 +30,10 @@ export const Menu: FC = () => {
       )}
       <div className={`${styles.menu} ${isOpened ? styles.active : ''}`}>
         <div className={styles.logo}>
-          <Link href={'/'}>RMe</Link>
+          <Link href={'/'}>
+            Мос <br />
+            ИнфоБез
+          </Link>
         </div>
         <div className={styles.nav}>
           <div className={styles.item}>
