@@ -4,7 +4,7 @@ const FooterComponent: FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_bottom}>
-        <span>Copyright © 2022 RMe</span>
+        <span>Copyright © 2022 МосИнфоБез</span>
       </div>
     </footer>
   )
