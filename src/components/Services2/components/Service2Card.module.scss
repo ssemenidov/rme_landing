@@ -1,7 +1,7 @@
 .service2Card {
   display: flex;
   flex-direction: row;
-  padding: 2em;
+  padding: 1em;
   .icon {
     width: 50%;
     height: 100%;
@@ -11,16 +11,55 @@
     text-align: justify;
     font-size: 2vh;
   }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  &_tags {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    &__item {
+      border-radius: 35px;
+      background: #0038FF;
+      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+      margin-left: 6px;
+      padding: 6px 14px;
+      color: white;
+    }
+  }
 }
 
 @media screen and (max-width: 460px) {
   .service2Card {
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 0.5em;
+    &_tags {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1em;
+      &__item {
+        border-radius: 35px;
+        background: #0038FF;
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+        margin-left: 6px;
+        padding: 5px 12px;
+        color: white;
+        font-size: 14px;
+      }
+    }
     .icon {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      height: 100%;
       width: 50%;
       margin: auto;
+    }
+    .row {
+      flex-direction: column;
     }
     .text {
       font-size: 4vw;

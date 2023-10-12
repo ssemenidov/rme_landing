@@ -121,25 +121,16 @@ const Services2Component: FC = () => {
             <Accordion
               motionProps={motionProps}
               className={'m-auto'}
-              variant={'splitted'}
+              variant={'light'}
             >
               {servicesData.map((e, i) => (
-                <AccordionItem
-                  key={i}
-                  title={e.title}
-                  subtitle={
-                    <div className={'flex flex-row gap-3'}>
-                      {e.tags.map((tag, ii) => (
-                        <Chip key={ii}>{tag}</Chip>
-                      ))}
-                    </div>
-                  }
-                >
+                <AccordionItem key={i} title={e.title}>
                   <Service2CardComponent
                     icon={e.image}
                     title={e.title}
                     text={e.text}
                     key={i}
+                    tags={e.tags}
                   />
                 </AccordionItem>
               ))}
@@ -148,26 +139,18 @@ const Services2Component: FC = () => {
           <div className={styles.acc}>
             <Accordion
               motionProps={motionProps}
-              className={'m-auto'}
-              variant={'splitted'}
+              className={'m-auto w-full'}
+              variant={'bordered'}
+              fullWidth={true}
             >
               {services2Data.map((e, i) => (
-                <AccordionItem
-                  key={i}
-                  title={e.title}
-                  subtitle={
-                    <div className={'flex flex-row gap-3'}>
-                      {e.tags.map((tag, ii) => (
-                        <Chip key={ii}>{tag}</Chip>
-                      ))}
-                    </div>
-                  }
-                >
+                <AccordionItem key={i} title={e.title}>
                   <Service2CardComponent
                     icon={e.image}
                     title={e.title}
                     text={e.text}
                     key={i}
+                    tags={e.tags}
                   />
                 </AccordionItem>
               ))}
@@ -179,26 +162,17 @@ const Services2Component: FC = () => {
             <Accordion
               motionProps={motionProps}
               className={'m-auto'}
-              variant={'light'}
+              variant={'bordered'}
               defaultExpandedKeys={['0']}
             >
               {[...servicesData, ...services2Data].map((e, i) => (
-                <AccordionItem
-                  key={i.toString()}
-                  title={e.title}
-                  subtitle={
-                    <div className={'flex flex-row gap-3'}>
-                      {e.tags.map((tag, ii) => (
-                        <Chip key={ii}>{tag}</Chip>
-                      ))}
-                    </div>
-                  }
-                >
+                <AccordionItem key={i.toString()} title={e.title}>
                   <Service2CardComponent
                     icon={e.image}
                     title={e.title}
                     text={e.text}
                     key={i}
+                    tags={e.tags}
                   />
                 </AccordionItem>
               ))}
