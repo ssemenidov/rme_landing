@@ -8,7 +8,7 @@ const TeamCard: FC<{
   icon: any
 }> = ({ title, text, icon }) => {
   return (
-    <div className={styles.teamCard} id={'benefits'}>
+    <div className={styles.teamCard}>
       <div className={styles.teamCard_icon}>
         <Image src={icon} alt={title} />
       </div>

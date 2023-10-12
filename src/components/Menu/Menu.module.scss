@@ -16,6 +16,9 @@
     font-size: 26px;
     margin-top: 1em;
     text-align: center;
+    img {
+      margin: auto;
+    }
   }
   .nav {
     display: flex;
@@ -49,6 +52,8 @@
     }
     div {
       margin-top: 1em;
+      display: flex;
+      flex-direction: row;
       a {
         margin-right: 1em;
       }

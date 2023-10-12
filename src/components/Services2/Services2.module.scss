@@ -1,0 +1,50 @@
+.services2 {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100dvh;
+  margin-top: 0;
+  display: flex;
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5em;
+  }
+
+  &_title {
+    margin: 1em auto;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .items {
+    display: flex;
+    flex-direction: row;
+  }
+  .items_mobile {
+    display: none;
+  }
+  .acc {
+    width: 50%;
+    min-height: 600px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .services2 {
+    .items {
+      flex-direction: column;
+      display: none;
+    }
+    .items_mobile {
+      display: flex;
+      padding: 0.5em;
+    }
+    .acc {
+      width: 100%;
+    }
+  }
+}

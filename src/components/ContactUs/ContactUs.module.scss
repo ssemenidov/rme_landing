@@ -212,6 +212,17 @@
       font-size: 1.1em;
       margin: auto;
       margin-top: 5px;
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) {
+  .contact {
+    height: 100vh;
+    padding: 5vw;
+    &_title {
+      margin-top: 5vh;
     }
   }
 }

@@ -6,6 +6,7 @@ import { Button } from '@/components/Button/Button.component'
 import telegram from '../../../public/icons/tg.svg'
 import whatsapp from '../../../public/icons/whatsapp.svg'
 import Image from 'next/image'
+import logo from '../../../public/logo.svg'
 
 export const Menu: FC = () => {
   const [isOpened, setOpened] = useState(false)
@@ -31,8 +32,7 @@ export const Menu: FC = () => {
       <div className={`${styles.menu} ${isOpened ? styles.active : ''}`}>
         <div className={styles.logo}>
           <Link href={'/'}>
-            Мос <br />
-            ИнфоБез
+            <Image src={logo} width={100} height={100} alt={'МосИнфоБез'} />
           </Link>
         </div>
         <div className={styles.nav}>

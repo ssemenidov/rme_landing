@@ -8,7 +8,7 @@ const BenefitCard: FC<{
   icon: any
 }> = ({ title, text, icon }) => {
   return (
-    <div className={styles.benefitCard} id={'benefits'}>
+    <div className={styles.benefitCard}>
       <div className={styles.benefitCard_icon}>
         <Image src={icon} alt={title} />
       </div>

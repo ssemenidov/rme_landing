@@ -38,6 +38,7 @@
 @media screen and (max-width: 460px) {
   .partners {
     &_cards {
+      flex-direction: column;
       margin-top: 3vh;
       &__item {
         font-size: 6vw;

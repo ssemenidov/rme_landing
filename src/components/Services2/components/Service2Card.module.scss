@@ -1,0 +1,31 @@
+.service2Card {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  .icon {
+    width: 50%;
+    height: 100%;
+  }
+  .text {
+    margin: auto;
+    text-align: justify;
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .service2Card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    .icon {
+      width: 50%;
+      margin: auto;
+    }
+    .text {
+      font-size: 4vw;
+      margin: 1em auto auto;
+      text-align: justify;
+    }
+  }
+}

@@ -9,6 +9,8 @@ import { Process } from '@/components/Process/Process.component'
 import { AboutUsComponent } from '@/components/AboutUs/AboutUs.component'
 import { ContactUsComponent } from '@/components/ContactUs/ContactUs.component'
 import { FooterComponent } from '@/components/Footer/Footer.component'
+import Services2Component from '@/components/Services2/Services2.component'
+import { Providers } from '@/app/providers'
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
         <Hero />
         <Benefits />
         <Works />
-        <ServicesComponent />
+        <Providers>
+          <Services2Component />
+        </Providers>
         <Partners />
         <Process />
         <AboutUsComponent />
