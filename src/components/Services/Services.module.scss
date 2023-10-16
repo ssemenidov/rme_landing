@@ -126,3 +126,10 @@
     }
   }
 }
+@media screen and (max-width: 820px) {
+  .services {
+    &_cards {
+      margin-top: 1vh;
+    }
+  }
+}

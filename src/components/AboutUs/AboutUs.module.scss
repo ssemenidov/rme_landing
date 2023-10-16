@@ -105,6 +105,19 @@
   }
 }
 
+@media screen and (max-width: 820px) {
+  .teamCard {
+    height: 40vh;
+    &_title {
+      margin-top: 2vh;
+      font-size: 4vw;
+    }
+    &_text {
+      font-size: 2vw;
+    }
+  }
+}
+
 @media screen and (max-width: 460px) {
   .aboutUs {
     &_cards {

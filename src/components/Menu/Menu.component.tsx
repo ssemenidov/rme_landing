@@ -31,7 +31,7 @@ export const Menu: FC = () => {
       )}
       <div className={`${styles.menu} ${isOpened ? styles.active : ''}`}>
         <div className={styles.logo}>
-          <Link href={'/'}>
+          <Link href={'#main'}>
             <Image src={logo} width={100} height={100} alt={'МосИнфоБез'} />
           </Link>
         </div>
