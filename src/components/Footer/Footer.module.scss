@@ -1,6 +1,7 @@
 .footer {
   height: 10vh;
   width: 100%;
+  margin-top: 150px;
   background: #3D3D3D;
   display: flex;
   flex-direction: column;
@@ -11,5 +12,11 @@
     color: #838383;
     font-size: 1.2em;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .footer {
+    margin-top: 0px;
   }
 }
