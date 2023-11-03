@@ -7,6 +7,7 @@ import security from '../../../public/services/Developer activity-pana 2.svg'
 import ai from '../../../public/services/Developer activity-cuate 1.svg'
 import consult from '../../../public/services/Developer activity-pana 1.svg'
 import site from '../../../public/services/Developer_activity-amico.svg'
+import tele from '../../../public/services/Telecommuting-rafiki.svg'
 import { ServiceCard } from '@/components/Services/ServiceCard.component'
 import { useDraggable } from 'react-use-draggable-scroll'
 
@@ -65,6 +66,48 @@ const servicesData = [
     title: 'Поддержка созданных технологий',
     text: 'Обеспечение надежной работы вашей инновационной продукции',
     image: arch,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Обработка естественного языка NLP',
+    text: 'Разработка моделей для анализа и обработки данных естественного языка.',
+    image: ai,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Работа с генеративными моделями',
+    text: 'Создание моделей, способных генерировать новые данные, тексты или изображения.',
+    image: arch,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Работа с платами (трассировка, инженеринг физических машин)',
+    text: 'Проектирование и разработка электронных схем, трассировка печатных плат и создание физических устройств.',
+    image: consult,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Создание ботов для телеги, вк, дискорд',
+    text: '',
+    image: security,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Создание CRM систем',
+    text: 'Разработка специализированных программных решений для управления взаимодействием с клиентами и улучшения бизнес-процессов.',
+    image: dev,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Компьютерное зрение',
+    text: 'Разработка алгоритмов и моделей для анализа и обработки изображений и видео.',
+    image: tele,
+  },
+  {
+    tags: ['Projects'],
+    title: 'Миграция данных',
+    text: 'Перенос данных из одной системы в другую при обновлении программного обеспечения или переходе на новую платформу.',
+    image: site,
   },
 ]
 
